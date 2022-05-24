@@ -1,0 +1,30 @@
+<div class="main-page">
+    <div class="left">
+        <div class="top">
+            <h1> Add Student</h1>
+        </div>
+        <form>
+            <label for=""> Student Name</label><pre></pre>
+            <input type="text" name="studentname" id="name" #studentname>
+            <label>Student Balance</label><pre></pre>
+            <input type="number" name="studentbalance" id="balance" #studentbalance><pre></pre>
+            <button id="btn"(click)="addstudent(studentname.value, +studentbalance.value)"> Add Student </button>
+        </form>
+
+    </div>
+    <div class="right">
+        <div class="top">
+            <h1>Student Name </h1>
+            <h1> Balance </h1><pre></pre>
+        </div>
+        <div class="buttons">
+            <button id="btn" (click)="checkstudents()"> Get Students</button><pre></pre>         
+            <button id="btn" (click)="balance()"> Students With Balance</button><pre></pre>
+            <button id="btn" (click)="cleared()"> Cleared Fees </button><pre></pre>
+        </div>
+        <div class="display" *ngFor="let student of selected | sort">
+            <p>{{student.name}}</p>
+            <p>{{student.balance}}</p>
+        </div>
+    </div>
+</div>

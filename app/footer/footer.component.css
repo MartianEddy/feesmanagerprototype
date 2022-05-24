@@ -1,0 +1,13 @@
+
+.footer{
+    background-color: blueviolet;
+    align-items: center;
+    justify-items: center;
+    height: 100px;
+    text-align: center;
+}
+
+p{
+    text-align: center;
+    margin-top: 50px;
+}
